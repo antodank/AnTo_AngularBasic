@@ -1,0 +1,25 @@
+<html>
+   
+   <head>
+      <title>AngularJS Day 1</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+   </head>
+   
+   <body ng-app = "myApp" style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+      <h1 ng-controller="HelloWorldCtrl" >{{helloworldmesaage}}</h1>
+      
+      <div >
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p>Hello <span ng-bind = "name"></span>!</p>
+      </div>
+        <script type="text/javascript">
+            var myApp = angular.module("myApp",[]);
+
+            myApp.controller("",function($scope)
+            {
+                $scope.helloworldmesaage = "Hello World with angulatjs on " + (new Date()).toDateString(); 
+            }); 
+        </script>
+   </body>
+</html>
